@@ -3,13 +3,13 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-  context: path.join(__dirname, "src"),
-  devtool: debug ? "inline-sourcemap" : false,
-  entry: "./js/client.js",
+  context: path.join(__dirname, "/app"),
+  devtool: debug ? "inline-sourcemap" : null,
+  entry: "./client.js",
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.js?$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
         query: {
@@ -20,7 +20,7 @@ module.exports = {
     ]
   },
   output: {
-    path: __dirname + "/src/",
+    path: __dirname + "/app/",
     filename: "client.min.js"
   },
   plugins: debug ? [] : [

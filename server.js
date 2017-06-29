@@ -26,7 +26,7 @@ mongoose.connection.on('connected', ()=>{
   console.log('Successfully opened a connection to ' +db);
 });
 
-mongoose.connection.on('disconnected'. ()=>{
+mongoose.connection.on('disconnected', ()=>{
   console.log('Successfully disconnected from ' + db);
 });
 
